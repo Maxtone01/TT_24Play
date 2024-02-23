@@ -15,19 +15,11 @@ public class CubeCollisionDetector : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("Obstacle"))
         {
-            Destroy(gameObject.GetComponent<PlayerMovement>());
+            Destroy(gameObject.GetComponent<ObjectMovement>());
         }
         if (collision.gameObject.CompareTag("Destroyable"))
         {
             Destroy(gameObject);
         }
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        // if (other.gameObject.CompareTag("Destroyable"))
-        // {
-        //     Destroy(gameObject);
-        // }
     }
 }

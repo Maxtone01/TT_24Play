@@ -1,6 +1,6 @@
 using Contexts;
 using UnityEngine;
-public class PlayerMovement: MonoBehaviour
+public class ObjectMovement: MonoBehaviour
 {
     public Rigidbody rigidBody;
     public bool IsPaused => GameContext.Instance.PauseManager.IsPaused;

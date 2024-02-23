@@ -17,7 +17,7 @@ public class Stacker : MonoBehaviour
     {
         transform.position = new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z);
         cube.transform.position = new Vector3(_stackPosition.position.x, _stackPosition.position.y, _stackPosition.position.z);
-        cube.gameObject.AddComponent<PlayerMovement>();
+        cube.gameObject.AddComponent<ObjectMovement>();
         cube.gameObject.AddComponent<CubeCollisionDetector>()._stacker = this;
         cube.gameObject.transform.parent = null;
         ShowScore();
